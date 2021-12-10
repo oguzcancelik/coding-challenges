@@ -24,33 +24,21 @@ public class LongestValidParentheses : IAlgorithm<string, int>
             for (var j = i; j < s.Length; j++)
             {
                 if (s[j] == '(')
-                {
                     left++;
-                }
                 else if (s[j] == ')' && left != 0)
-                {
                     right++;
-                }
                 else
-                {
                     break;
-                }
 
                 if (left == right && result < left + right)
-                {
                     result = left + right;
-                }
 
                 if (left < right)
-                {
                     break;
-                }
             }
 
             if (result > s.Length - i)
-            {
                 break;
-            }
         }
 
         return result;
