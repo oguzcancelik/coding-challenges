@@ -34,9 +34,7 @@ public class SpinWords : IAlgorithm<string, string>
         var result = new StringBuilder();
 
         for (var i = source.Length - 1; i >= 0; i--)
-        {
             result.Append(source[i]);
-        }
 
         return result.ToString();
     }

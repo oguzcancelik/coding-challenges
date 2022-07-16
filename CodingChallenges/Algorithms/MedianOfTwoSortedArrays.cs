@@ -33,9 +33,7 @@ public class MedianOfTwoSortedArrays : IAlgorithm<(int[] first, int[] second), d
             previous = current;
 
             if (firstIndex == firstLength && secondIndex == secondLength)
-            {
                 break;
-            }
 
             if (firstIndex == firstLength)
             {

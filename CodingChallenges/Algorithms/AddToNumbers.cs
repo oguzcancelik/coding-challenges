@@ -43,16 +43,12 @@ public class AddToNumbers : IAlgorithm<(ListNode first, ListNode second), ListNo
         } while (l1 != null || l2 != null);
 
         if (remainder != 0)
-        {
             values.Add(1);
-        }
 
         ListNode total = null;
 
         for (var i = values.Count - 1; i >= 0; i--)
-        {
             total = new ListNode(values[i], total);
-        }
 
         return total;
     }

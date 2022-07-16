@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using CodingChallenges.Algorithms.Abstractions;
+﻿using CodingChallenges.Algorithms.Abstractions;
 
 namespace CodingChallenges.Algorithms;
 

@@ -39,9 +39,7 @@ public class SubstringWithConcatenationOfAllWords : IAlgorithm<(string s, string
             }
 
             if (addIndex)
-            {
                 indexes.Add(i);
-            }
         }
 
         return indexes;
@@ -52,9 +50,7 @@ public class SubstringWithConcatenationOfAllWords : IAlgorithm<(string s, string
         for (var i = 0; i < source.Length; i += word.Length)
         {
             if (source.Substring(i, word.Length) == word)
-            {
                 return i;
-            }
         }
 
         return -1;

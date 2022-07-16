@@ -25,17 +25,11 @@ public class FirstMissingPositiveNumber : IAlgorithm<int[], int>
 
         for (var i = 1; i <= nums.Length; i++)
         {
-            if (values.Contains(i))
-            {
-                if (i > max)
-                {
-                    max = i;
-                }
-            }
-            else
-            {
+            if (!values.Contains(i))
                 return i;
-            }
+
+            if (i > max)
+                max = i;
         }
 
         return max + 1;

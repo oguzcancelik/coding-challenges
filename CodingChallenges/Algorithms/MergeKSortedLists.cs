@@ -23,9 +23,7 @@ public class MergeKSortedLists : IAlgorithm<ListNode[], ListNode>
             var index = LowestIndex(lists);
 
             if (!index.HasValue)
-            {
                 break;
-            }
 
             var current = lists[index.Value];
 
@@ -38,9 +36,7 @@ public class MergeKSortedLists : IAlgorithm<ListNode[], ListNode>
         ListNode result = null;
 
         for (var i = values.Count - 1; i >= 0; i--)
-        {
             result = new ListNode(values[i], result);
-        }
 
         return result;
     }

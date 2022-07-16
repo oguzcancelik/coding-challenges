@@ -25,9 +25,7 @@ public class CandyRating : IAlgorithm<int[], int>
             var previous = ratings[i - 1];
 
             if (current > previous)
-            {
                 result[i] = result[i - 1] + 1;
-            }
             else if (current < previous && result[i - 1] == 1)
             {
                 for (var j = i - 1;; j--)
@@ -36,17 +34,13 @@ public class CandyRating : IAlgorithm<int[], int>
                     total++;
 
                     if (j == 0 || ratings[j] >= ratings[j - 1] || result[j - 1] >= result[j] + 1)
-                    {
                         break;
-                    }
                 }
 
                 result[i] = 1;
             }
             else
-            {
                 result[i] = 1;
-            }
 
             total += result[i];
         }

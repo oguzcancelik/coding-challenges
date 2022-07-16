@@ -22,9 +22,7 @@ public class LongestPalindromicSubstring : IAlgorithm<string, string>
                 var value = s.Substring(j, i);
 
                 if (IsPalindromic(value))
-                {
                     return value;
-                }
             }
         }
 
@@ -38,9 +36,7 @@ public class LongestPalindromicSubstring : IAlgorithm<string, string>
             var result = s[i] == s[s.Length - 1 - i];
 
             if (!result)
-            {
                 return false;
-            }
         }
 
         return true;
